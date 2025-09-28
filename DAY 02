@@ -1,0 +1,22 @@
+//Write a program to reverse a string entered by the user without using any library functions.
+//SOLUTION:
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    string str;
+    cout << "Enter a string: ";
+    cin >> str;   // takes input without spaces
+
+    int n = str.length();
+    // Swap characters from start and end
+    for (int i = 0; i < n / 2; i++) {
+        char temp = str[i];
+        str[i] = str[n - i - 1];
+        str[n - i - 1] = temp;
+    }
+
+    cout << "Reversed string: " << str << endl;
+    return 0;
+}
